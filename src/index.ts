@@ -1,30 +1,30 @@
-import express from 'express'
-import { ApolloServer } from 'apollo-server-express'
+import express from "express";
+import { ApolloServer } from "apollo-server-express";
 
-import typeDefs from './types'
-import resolvers from './resolvers'
-import FactsAPI from './dataFetch/facts'
+import typeDefs from "./types";
+import resolvers from "./resolvers";
+import FactsAPI from "./dataFetch/facts";
 
 const dataFetch = () => ({
-    factsAPI: new FactsAPI()
-})
+  factsAPI: new FactsAPI(),
+});
 
 const main = async () => {
-    const app = express();
+  const app = express();
 
-    const apolloServer = new ApolloServer({
-        resolvers,
-        typeDefs,
-        dataSources: dataFetch,
-    })
+  const apolloServer = new ApolloServer({
+    resolvers,
+    typeDefs,
+    dataSources: dataFetch,
+  });
 
-    apolloServer.applyMiddleware({ app })
+  apolloServer.applyMiddleware({ app });
 
-    app.listen(3000, () => {
-        console.log('server listening on port 3000')
-    })
+  app.listen(3000, () => {
+    console.log("server listening on port 3000");
+  });
 };
 
 main().catch((error) => {
-    console.log(error);
-})
+  console.log(error);
+});
