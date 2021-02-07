@@ -1,8 +1,10 @@
-import books from "../sampledata";
 
 const resolvers = {
     Query: {
-        books: () => books,
+        categories: async (_source, _args, { dataSources }) => {
+            return dataSources.factsAPI.getCategories()
+        },
+        
     },
 };
 

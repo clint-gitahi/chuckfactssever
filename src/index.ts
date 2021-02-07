@@ -3,6 +3,11 @@ import { ApolloServer } from 'apollo-server-express'
 
 import typeDefs from './types'
 import resolvers from './resolvers'
+import FactsAPI from './dataFetch/facts'
+
+const dataFetch = () => ({
+    factsAPI: new FactsAPI()
+})
 
 const main = async () => {
     const app = express();
@@ -10,6 +15,7 @@ const main = async () => {
     const apolloServer = new ApolloServer({
         resolvers,
         typeDefs,
+        dataSources: dataFetch,
     })
 
     apolloServer.applyMiddleware({ app })

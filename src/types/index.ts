@@ -1,15 +1,13 @@
 import { gql } from 'apollo-server-express';
 
-const typeDef = gql`
-
-    type Book {
-        title: String
-        author: String
+export default gql`
+    type Category {
+        id: String!
+        name: String!
     }
-
+    
     type Query {
-        books: [Book]
+        categories: [Category]
     }
 `;
 
-export default typeDef;
