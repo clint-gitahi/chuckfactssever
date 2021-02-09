@@ -16,6 +16,8 @@ const main = async () => {
     resolvers,
     typeDefs,
     dataSources: dataFetch,
+    introspection: true,
+    playground: true,
   });
 
   apolloServer.applyMiddleware({ app });

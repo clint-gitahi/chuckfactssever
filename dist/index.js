@@ -26,6 +26,8 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         resolvers: resolvers_1.default,
         typeDefs: types_1.default,
         dataSources: dataFetch,
+        introspection: true,
+        playground: true,
     });
     apolloServer.applyMiddleware({ app });
     app.listen(process.env.PORT || 2000);
