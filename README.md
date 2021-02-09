@@ -1,6 +1,10 @@
 # Getting Started
 
-React app for Chuck Norris API 
+React app for Chuck Norris API.
+
+Available on [sandbox](https://codesandbox.io/s/pedantic-nash-qe1rj)
+
+Add `graphql` at the end of the url to access the playground
 
 ## Installation
 
