@@ -20,8 +20,8 @@ const main = async () => {
 
   apolloServer.applyMiddleware({ app });
 
-  app.listen(3000, () => {
-    console.log("server listening on port 3000");
+  app.listen(({port: process.env.PORT || 2000}), () => {
+    console.log("server listening on port 2000");
   });
 };
 

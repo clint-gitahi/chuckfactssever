@@ -31,7 +31,6 @@ export default class FactsAPI extends RESTDataSource {
       url,
       value,
     } = await this.get("random", { category });
-    console.log(created_at, icon_url, id, updated_at, url, value);
     return {
       categories: categories.map((item) => this.eachCategoryHandler(item)),
       created_at,
