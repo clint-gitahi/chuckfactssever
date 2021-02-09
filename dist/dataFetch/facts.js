@@ -35,7 +35,6 @@ class FactsAPI extends apollo_datasource_rest_1.RESTDataSource {
     getFactByCategory({ category }) {
         return __awaiter(this, void 0, void 0, function* () {
             const { categories, created_at, icon_url, id, updated_at, url, value, } = yield this.get("random", { category });
-            console.log(created_at, icon_url, id, updated_at, url, value);
             return {
                 categories: categories.map((item) => this.eachCategoryHandler(item)),
                 created_at,

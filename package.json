@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "watch": "tsc -w",
-    "start2": "ts-node src/index.ts",
+    "start": "ts-node src/index.ts",
     "dev": "nodemon --exec ts-node src/index.ts",
-    "start": "node dist/index.js",
+    "start2": "node dist/index.js",
     "dev2": "nodemon dist/index.js"
   },
   "keywords": [],

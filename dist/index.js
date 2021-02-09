@@ -28,9 +28,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
         dataSources: dataFetch,
     });
     apolloServer.applyMiddleware({ app });
-    app.listen(2000, () => {
-        console.log("server listening on port 2000");
-    });
+    app.listen(process.env.PORT || 2000);
 });
 main().catch((error) => {
     console.log(error);
