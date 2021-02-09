@@ -1,0 +1,1 @@
+{"version":3,"file":"sampledata.js","sourceRoot":"","sources":["../src/sampledata.ts"],"names":[],"mappings":";;AAAA,MAAM,KAAK,GAAG;IACV;QACI,KAAK,EAAE,QAAQ;QACf,MAAM,EAAE,IAAI;KACf;IACD;QACI,KAAK,EAAE,OAAO;QACd,MAAM,EAAE,KAAK;KAChB;CACJ,CAAA;AAED,kBAAe,KAAK,CAAC"}
